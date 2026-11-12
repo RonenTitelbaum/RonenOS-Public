@@ -1,0 +1,38 @@
+{
+  "schema": "ronenos-public/v1",
+  "repository": "RonenTitelbaum/RonenOS-Public",
+  "edition_version": "1.0.0",
+  "snapshot_date": "2026-11-12",
+  "read_only": true,
+  "scope": "curated public guidance only",
+  "upstream_source_commit": "28e8f80b49ed1bc972107073d7a4b1949301f739",
+  "documents": [
+    {
+      "path": "core/runtime.md",
+      "bytes": 4141,
+      "sha256": "4e513b459bff80c723977c7caa65e99f26beadd0d29bdc95f1a7dec3dbbb1e2a"
+    },
+    {
+      "path": "modules/search.md",
+      "bytes": 2923,
+      "sha256": "b1a034b9305082fe8d90c15b6678c0377728e3ffa008b18d95bd21641cc3bb68"
+    },
+    {
+      "path": "modules/analysis.md",
+      "bytes": 2523,
+      "sha256": "d0a0ad223995a1cbc25b8e35ef203734dbe6195455d16ce5d9e664691079b080"
+    },
+    {
+      "path": "workflows/pbs.md",
+      "bytes": 1039,
+      "sha256": "28e04c5dde510d66bf8f97d03cdb6d50fee10919d850f4974f723d626ad5cf79"
+    },
+    {
+      "path": "templates/handoff.md",
+      "bytes": 622,
+      "sha256": "1470a3988d51c8e81df5a85ac8538a5170b9d9f9d4a69905955a823ed226d3de"
+    }
+  ],
+  "offline_bundle": "exports/RONEN_OS_ANY_GPT.txt",
+  "non_exported_references": "unavailable; never follow into private sources"
+}

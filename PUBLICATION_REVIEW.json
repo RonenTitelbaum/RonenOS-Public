@@ -1,0 +1,26 @@
+{
+  "schema": "ronenos-public-review/v1",
+  "review_date": "2026-11-12",
+  "scope": "curated public edition; not a mirror or full upstream export",
+  "upstream_repository": "RonenTitelbaum/RonenOS",
+  "upstream_commit": "28e8f80b49ed1bc972107073d7a4b1949301f739",
+  "reviewed_git_blobs": {
+    "modules/search.md": "3530ed0bc2aa765ccae2f778a3df2c5637107d51",
+    "modules/analysis.md": "2c7101500af0815e13e4961e9474aaf446f40ea5"
+  },
+  "source_mapping": {
+    "modules/search.md": "modules/database_search/context.md",
+    "modules/analysis.md": "modules/data_analysis/context.md"
+  },
+  "review": "Both full source files were read. They contain reusable policy, generic source references and no personal account records. Public core, PBS and handoff are new sanitized adaptations. Original runtime, BOOT, preferences, state, packs, archives and private history are not exported.",
+  "excluded": [
+    "personal profile and standing personal permissions",
+    "credentials and authenticated sessions",
+    "financial, health and contact records",
+    "device details and local paths",
+    "trading history, datasets and live state",
+    "private handoffs, archives and Git history"
+  ],
+  "limits": "Manual content review plus deterministic checks is not a proof that every possible sensitive datum has been detected. Export extensions require fresh review. Generic references to non-exported files confer no access.",
+  "automatic_export": false
+}
