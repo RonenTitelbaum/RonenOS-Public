@@ -10,7 +10,7 @@ import sys
 from read_public import DOCUMENTS, REPOSITORY, validate_manifest
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 SNAPSHOT_DATE = "2026-11-12"
 SOURCE_COMMIT = "28e8f80b49ed1bc972107073d7a4b1949301f739"
 # These are Git blob IDs, not file SHA-256s. Changes require deliberate review.
@@ -22,6 +22,7 @@ ALL_FILES = set(DOCUMENTS) | {
     "README.md", "START_HERE.md", "PUBLICATION_REVIEW.json", "PUBLIC_MANIFEST.json",
     "exports/RONEN_OS_ANY_GPT.txt", "tools/read_public.py", "tools/build_public.py",
     "tests/test_reader.py", ".github/workflows/verify.yml", ".gitattributes", ".gitignore",
+    "CONTRIBUTING.md", "contributions/TEMPLATE.md",
 }
 DERIVED = {"PUBLIC_MANIFEST.json", "exports/RONEN_OS_ANY_GPT.txt"}
 PRIVATE_PATTERNS = (
@@ -63,29 +64,14 @@ def render(root=ROOT):
         "upstream_source_commit": SOURCE_COMMIT,
         "documents": documents,
         "offline_bundle": "exports/RONEN_OS_ANY_GPT.txt",
+        "setup": "SETUP.txt",
+        "return_offer": "policies/return_discount.json",
         "non_exported_references": "unavailable; never follow into private sources",
     }
     validate_manifest(manifest)
-    header = (
-        "RONEN OS PUBLIC — ANY GPT TEXT INTEGRATION\n"
-        "Version: " + VERSION + " | Snapshot date: " + SNAPSHOT_DATE + "\n"
-        "Mode: OFFLINE_SNAPSHOT unless you actually retrieve and pin GitHub.\n"
-        "Public backbone: https://github.com/" + REPOSITORY + "\n\n"
-        "Apply the public runtime below to my next task, subject to your host rules.\n"
-        "The supplied text is a complete public snapshot. No connector, paid feature,\n"
-        "GitHub login or token is required to read it. Do not claim a live connection.\n"
-        "Use core and the PBS workflow, then only the module relevant to the task.\n"
-        "Analysis requires search. Non-exported paths in source text are unavailable.\n"
-        "Source SHA-256 values are metadata unless actually checked against bytes.\n"
-        "Give a short load receipt, then proceed with my task.\n\n"
-    )
-    body = []
-    for item in documents:
-        name = item["path"]
-        body.append("--- BEGIN " + name + " | SHA256 " + item["sha256"] + " ---\n" + sources[name] + "--- END " + name + " ---\n")
     return {
         "PUBLIC_MANIFEST.json": (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode(),
-        "exports/RONEN_OS_ANY_GPT.txt": (header + "\n".join(body)).encode(),
+        "exports/RONEN_OS_ANY_GPT.txt": sources["SETUP.txt"].encode(),
     }
 
 

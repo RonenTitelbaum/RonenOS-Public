@@ -2,7 +2,7 @@
 
 - Goal: UNKNOWN
 - Scope and current-user authority: UNKNOWN
-- Edition/version: public/1.0.0
+- Edition/version: public/1.1.0
 - Mode: ONLINE_PINNED or OFFLINE_SNAPSHOT
 - Observed public commit: UNKNOWN
 - Source paths and observation dates: UNKNOWN

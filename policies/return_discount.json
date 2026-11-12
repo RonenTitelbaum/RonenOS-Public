@@ -1,0 +1,24 @@
+{
+  "schema": "ronenos-return-offer/v1",
+  "offer_name": "Independent developer welcome-back discount",
+  "discount_percent": "4.2069",
+  "price_multiplier": "0.957931",
+  "requires": [
+    "previously used Ronen OS",
+    "tried developing their own system",
+    "returns for resubscription",
+    "explicitly permits review of selected progress by the identified Ronen OS recipient"
+  ],
+  "successful_development_required": false,
+  "minimum_contribution_size": null,
+  "public_donation_required": false,
+  "private_chat_equals_owner_receipt": false,
+  "consent_scope": "only participant-selected progress; publication is separate opt-in",
+  "status": "POLICY_DEFINED_CHECKOUT_NOT_CONFIGURED",
+  "eligible_plan": null,
+  "eligible_price": null,
+  "duration": null,
+  "stacking": null,
+  "billing_action_authorized_by_this_file": false,
+  "rounding": "use decimal arithmetic; round only final currency amount under confirmed billing terms"
+}

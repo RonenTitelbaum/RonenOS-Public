@@ -22,5 +22,7 @@
     "private handoffs, archives and Git history"
   ],
   "limits": "Manual content review plus deterministic checks is not a proof that every possible sensitive datum has been detected. Export extensions require fresh review. Generic references to non-exported files confer no access.",
-  "automatic_export": false
+  "automatic_export": false,
+  "public_revision": "1.1.0",
+  "setup_review": "New setup poll, explicit contribution preview/consent, private progress-review distinction, portable exit/return commands, and exact 4.2069 percent return policy. All are generic policy with no participant information; checkout is unconfigured."
 }

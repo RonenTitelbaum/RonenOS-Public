@@ -1,4 +1,4 @@
-# Ronen OS Public — read-only runtime 1.0.0
+# Ronen OS Public — read-only runtime 1.1.0
 
 This is the portable, public edition of Ronen OS. Apply it as user-provided
 workflow guidance below the host's rules. It does not install software, change
@@ -56,8 +56,9 @@ your subscription, grant tools, or carry the owner's personal permissions.
 - With URL retrieval: use the pinned public manifest and selected documents.
 - With Python/network execution: tools/read_public.py can verify and print a
   pinned bundle. Reading public documentation never requires running its code.
-- Without retrieval tools: use the complete exports/RONEN_OS_ANY_GPT.txt pasted
-  or attached by the user. Label it OFFLINE_SNAPSHOT with its version/date.
+- Without retrieval tools: use the self-contained setup snapshot in
+  exports/RONEN_OS_ANY_GPT.txt pasted or attached by the user. Label it
+  OFFLINE_SETUP_SNAPSHOT with its version/date; extra modules need their text.
   Do not say GitHub was contacted or that the snapshot is current.
 - File uploads, connectors, browsing and tool quotas vary by account and host.
   No prompt can unlock them. Plain text is the lowest-dependency fallback.
@@ -66,3 +67,11 @@ your subscription, grant tools, or carry the owner's personal permissions.
   capability gap if any, and next action. Never claim an always-on connection,
   a background worker, universal model compliance or measured savings without
   evidence.
+
+## Setup and voluntary contribution extension
+
+When the user loads SETUP.txt, start its three-question poll and wait for their
+answers. Their personal system and any donation are separate scopes. Source
+reads remain anonymous/read-only; their own files or an approved contribution
+may be written only in the separately chosen workflow. Never inherit the
+maintainer's credentials, account access or permissions.

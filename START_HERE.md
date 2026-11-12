@@ -1,29 +1,24 @@
-# Load Ronen OS Public
+# Make Ronen OS yours
 
-Copy the following into the GPT chat you want to use. No login is required.
+Paste or attach [the simple TXT](exports/RONEN_OS_ANY_GPT.txt) to a GPT chat.
+Its first response should be a three-question setup poll, then wait for you:
 
-```text
-Load Ronen OS Public in read-only mode for my next task.
-Public source: https://github.com/RonenTitelbaum/RonenOS-Public
+1. Choose local files, your own GitHub, Ronen's contribution track, or an
+   existing system you want to keep.
+2. Pick the first goal.
+3. Choose language and explanation style.
 
-If you can retrieve URLs, first observe the public main commit through
-https://api.github.com/repos/RonenTitelbaum/RonenOS-Public/commits/main
-Then replace COMMIT below with that exact 40-character SHA and read:
-https://raw.githubusercontent.com/RonenTitelbaum/RonenOS-Public/COMMIT/PUBLIC_MANIFEST.json
-Read the listed core runtime and PBS workflow, then only the module needed
-for my task, all at that same commit. Analysis also needs search.
-Verify bytes and SHA-256 only if you actually have that capability.
-Do not request a token, login, private repo, or write permission.
+Local and private are defaults. Donating is optional. Your personal profile
+stays private, and publishing any selected contribution needs a separate Yes.
+An upstream personal branch requires permission; without it, the setup uses a
+fork and draft pull request to the `donations/inbox` review branch.
 
-If URL retrieval fails or is unavailable, say so plainly. Use the full
-RONEN_OS_ANY_GPT.txt snapshot if I have supplied it; label it OFFLINE_SNAPSHOT.
-Do not invent a successful GitHub connection, private state, tools, or a
-background process. Follow the host's rules and my current task authority.
-Give a short load receipt and proceed with the task.
-```
+Use `UNSUB` to leave with a portable handoff or `RESUB` to return for repair.
+Trying to develop your own system is welcome. Return and let us review progress
+you select for the **4.2069% return offer**. Public posting is not required.
+This TXT does not create/cancel a paid subscription or apply a checkout coupon.
 
-Without URL retrieval, copy the full text from
-[exports/RONEN_OS_ANY_GPT.txt](exports/RONEN_OS_ANY_GPT.txt) into the chat instead.
-That includes the public runtime and modules, so it can work without a connector.
-It is a dated snapshot, not a live GitHub connection. Read-only guidance cannot
-remove permissions from unrelated tools already attached to a chat.
+With URL tools, the chat can fetch the current public main commit once, then
+pin the manifest, SETUP.txt and selected documents to it. Without URL tools,
+the TXT contains enough guidance to start setup as OFFLINE_SETUP_SNAPSHOT.
+No GitHub token, paid-tier feature or global hook is installed by the text.

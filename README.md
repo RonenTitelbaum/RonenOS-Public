@@ -4,21 +4,25 @@ A portable Ronen OS integration for GPT chats on any subscription tier, with a
 public GitHub backbone and a plain-text fallback. Tool availability and limits
 still depend on the chat/account. This project does not unlock paid features.
 
-**Start:** open [START_HERE.md](START_HERE.md). For a chat without URL retrieval,
-paste [RONEN_OS_ANY_GPT.txt](exports/RONEN_OS_ANY_GPT.txt) into that chat, then give
-it your task. The text is self-contained; attaching it is optional.
+**Start:** paste or attach [RONEN_OS_ANY_GPT.txt](exports/RONEN_OS_ANY_GPT.txt)
+to a GPT chat. It starts a short setup poll for storage, first goal and working
+style. The TXT includes a small offline workflow; GitHub retrieval is optional.
+Choose local files, your own private GitHub, the voluntary public contribution
+track, or your existing system. See [START_HERE.md](START_HERE.md).
 
 ## What is shared
 
 | Part | Purpose |
 | --- | --- |
 | core/runtime.md | Public workflow, privacy and source-loading rules |
+| SETUP.txt | Setup/personalization poll and leave/return commands |
 | modules/search.md | Source discovery, coverage and evidence rules |
 | modules/analysis.md | Reproducible analysis and uncertainty rules |
 | workflows/pbs.md | One bounded, verified step at a time |
 | templates/handoff.md | Empty continuation template |
 | PUBLIC_MANIFEST.json | Explicit document allowlist with byte counts and SHA-256 |
-| exports/RONEN_OS_ANY_GPT.txt | Generated offline snapshot for paste/attachment |
+| exports/RONEN_OS_ANY_GPT.txt | Generated self-contained setup TXT |
+| policies/return_discount.json | Exact 4.2069% return offer; checkout unconfigured |
 | tools/read_public.py | Optional standard-library, GET-only pinned reader |
 
 This is a curated public edition, not the complete private OS. Two reusable
@@ -49,11 +53,18 @@ Python 3.10+ and internet access are sufficient. No packages or credentials:
 ```bash
 python tools/read_public.py --commit PUBLIC_COMMIT_SHA
 python tools/read_public.py --commit PUBLIC_COMMIT_SHA --module analysis
+python tools/read_public.py --commit PUBLIC_COMMIT_SHA --module setup
 ```
 
 The reader prints the core/workflow/template and the selected module. Analysis
 also includes its search prerequisite. An explicit commit is mandatory; there
 is no implicit latest mode, private fallback, arbitrary URL or write endpoint.
+
+The setup extension can help the current user prepare their own files or an
+explicitly approved contribution with separate tools. The public source reader
+itself remains GET-only. [Contribution and return rules](CONTRIBUTING.md) keep
+selected progress review separate from public donation. The welcome-back offer
+is 4.2069%; pricing/checkout terms are not configured here.
 
 ## Maintaining this public edition
 

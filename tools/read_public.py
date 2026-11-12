@@ -13,7 +13,7 @@ MAX_MANIFEST = 65536
 MAX_DOCUMENT = 65536
 DOCUMENTS = (
     "core/runtime.md", "modules/search.md", "modules/analysis.md",
-    "workflows/pbs.md", "templates/handoff.md",
+    "workflows/pbs.md", "templates/handoff.md", "SETUP.txt", "policies/return_discount.json",
 )
 BASE_DOCUMENTS = ("core/runtime.md", "workflows/pbs.md", "templates/handoff.md")
 
@@ -103,7 +103,7 @@ def fetch_bytes(url, limit):
 
 def load_bundle(commit, module="core", fetch=fetch_bytes):
     validate_commit(commit)
-    if module not in ("core", "search", "analysis"):
+    if module not in ("core", "search", "analysis", "setup"):
         raise BundleError("unknown module")
     root = BASE + "/" + commit + "/"
     raw_manifest = fetch(root + "PUBLIC_MANIFEST.json", MAX_MANIFEST)
@@ -116,6 +116,8 @@ def load_bundle(commit, module="core", fetch=fetch_bytes):
         selected.append("modules/search.md")
     if module == "analysis":
         selected.append("modules/analysis.md")
+    if module == "setup":
+        selected.extend(("SETUP.txt", "policies/return_discount.json"))
     frames = []
     for path in selected:
         expected = inventory[path]
@@ -142,7 +144,7 @@ def load_bundle(commit, module="core", fetch=fetch_bytes):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--commit", required=True)
-    parser.add_argument("--module", choices=("core", "search", "analysis"), default="core")
+    parser.add_argument("--module", choices=("core", "search", "analysis", "setup"), default="core")
     args = parser.parse_args()
     try:
         output = load_bundle(args.commit, args.module)

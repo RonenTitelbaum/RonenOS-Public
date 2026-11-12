@@ -1,7 +1,7 @@
 {
   "schema": "ronenos-public/v1",
   "repository": "RonenTitelbaum/RonenOS-Public",
-  "edition_version": "1.0.0",
+  "edition_version": "1.1.0",
   "snapshot_date": "2026-11-12",
   "read_only": true,
   "scope": "curated public guidance only",
@@ -9,8 +9,8 @@
   "documents": [
     {
       "path": "core/runtime.md",
-      "bytes": 4141,
-      "sha256": "4e513b459bff80c723977c7caa65e99f26beadd0d29bdc95f1a7dec3dbbb1e2a"
+      "bytes": 4616,
+      "sha256": "68a54111ef083c66f93558b2d65c5a1eaa0ef6521278263c6ed57f6fa3f351d2"
     },
     {
       "path": "modules/search.md",
@@ -30,9 +30,21 @@
     {
       "path": "templates/handoff.md",
       "bytes": 622,
-      "sha256": "1470a3988d51c8e81df5a85ac8538a5170b9d9f9d4a69905955a823ed226d3de"
+      "sha256": "d5e31abed623263dd7dafec63214af473d12ae14dd6aee5f9ef73cf00dba50f0"
+    },
+    {
+      "path": "SETUP.txt",
+      "bytes": 7221,
+      "sha256": "05c93dc2864ab0dfb3b382401bb1a29f413b6bc796525ff1c4760c84a41ad189"
+    },
+    {
+      "path": "policies/return_discount.json",
+      "bytes": 942,
+      "sha256": "098f54229fac8b6fc5b3f274332429eea83d1eee86f66524b88148fbc5f81d06"
     }
   ],
   "offline_bundle": "exports/RONEN_OS_ANY_GPT.txt",
+  "setup": "SETUP.txt",
+  "return_offer": "policies/return_discount.json",
   "non_exported_references": "unavailable; never follow into private sources"
 }

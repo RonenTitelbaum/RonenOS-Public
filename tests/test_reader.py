@@ -45,6 +45,15 @@ class PublicReaderTests(unittest.TestCase):
         self.assertIn("modules/search.md", receipt["documents"])
         self.assertIn("modules/analysis.md", receipt["documents"])
 
+    def test_setup_load_verifies_setup_and_offer_without_extra_modules(self):
+        text = reader.load_bundle(COMMIT, "setup", self.fetch)
+        receipt = json.loads(text.splitlines()[0])
+        self.assertEqual(receipt["documents"], list(reader.BASE_DOCUMENTS) + [
+            "SETUP.txt", "policies/return_discount.json",
+        ])
+        self.assertEqual(receipt["integrity"], "VERIFIED_BYTES")
+        self.assertEqual(len(self.calls), 6)
+
     def test_mutable_refs_rejected_before_network(self):
         for ref in ("main", "latest", "../main", "a" * 39, "A" * 40, None):
             with self.subTest(ref=ref), self.assertRaises(reader.BundleError):
